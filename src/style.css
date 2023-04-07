@@ -33,7 +33,7 @@ h2 {
   width: 98%;
 }
 
-input[type=text] {
+input[type="text"] {
   padding: 16px;
   display: block;
   outline: none;
@@ -67,7 +67,7 @@ input[type=text] {
   text-decoration: line-through;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   display: inline-block;
   border: 0;
   position: relative;
@@ -77,7 +77,7 @@ input[type=checkbox] {
   margin-right: 9px;
 }
 
-input[type=checkbox]:hover {
+input[type="checkbox"]:hover {
   cursor: pointer;
 }
 
