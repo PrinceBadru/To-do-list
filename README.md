@@ -1,71 +1,156 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# AWESOME BOOK PROJECT
 
-# To-Do-List
+# 📗 Table of Contents
 
-## Description
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
 
-This is an awesome application that grants users the ability to save list of activites/task they intend doing.
+# 📖 [AWESOME BOOK PROJECT] <a name="about-project"></a>
+
+**[AWESOME_BOOK_PROJECT]** 
+This project is about addition and deletion of books into local storage 
+using javascript objects. 
+
+## 🛠 Built With <a name="built-with"></a>
+
+- HTML
+- CSS
+- Javascript
+
+### Tech Stack <a name="tech-stack"></a>
+
+### Key Features <a name="key-features"></a>
+
+- **[Display_list_in_Table_form]**
+- **[Add_buttons_and_functionallity]**
+- **[Remove_Button_and_functionallity]**
+- **[ES6_Modules]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
 
 
-## Build With
+- [Live Demo Link](https://yourdeployedapplicationlink.com)
 
-- Editor : Visual studio code
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Languages
+## 💻 Getting Started <a name="getting-started"></a>
 
-  - [ ] HTML
-  - [ ] CSS
-  - [ ] JavaScript
+> Describe how a new developer could make use of your project.
 
-- Terminologies
-  - [ ] Github
-  - [ ] Webpack
-  - [ ] Linters
-  - [ ] WebHint
-  - [ ] Stylelint
-  - [ ] ESlint
+To get a local copy up and running, follow these steps.
 
-## Live Demo 
+### Prerequisites
 
-[Live Demo Link](https://progress2002.github.io/To-Do-List/dist/)
+In order to run this project you need:
 
+- In order to run this project you need:
+   - Modern web browser  
 
+### Setup
 
+Clone this repository to your desired folder:
+- https://github.com/david30-maker/awesome-book-project
+- cd awesome-book-project
+### Install
 
-## Getting Started
+Install this project with:
+- cd awesome-book-project
+- Double click on the index.html file
 
-step 1:
-Clone this repo locally using git in the command line and the following command
+### Usage
 
-```
-https://github.com/Progress2002/To-Do-List.git
-```
-
-Alternatively, you can just download the complete zip file and extract the folder in your directory
-
-Step 2:
-Copy All Project files and run using VSCODE. HTML can be viewed in browser.
+To run the project, execute the following command:
 
 
-## Author
 
-👤 **Progress C. Ezeamaka**
+### Run tests
 
-- GitHub: [@githubhandle](https://github.com/Progress2002)
-- Twitter: [@twitterhandle](https://twitter.com/Progress_2002)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/progress-ezeamaka-27b114247)
+To run tests, run the following command:
 
-## 🤝 Contributing
+### Deployment
+
+You can deploy this project using:
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 👥 Authors <a name="authors"></a>
+
+
+👤 **BADRUNDAWULA**
+
+- GitHub: [@githubhandle](https://github.com/PrinceBadru)
+- Twitter: [@twitterhandle](https://twitter.com/BadruNdawula)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/badru-ndawula-930b7b217/)
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **[Beautify_home_page_using_CSS]**
+- [ ] **[Add_Contact]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Progress2002/Webpack-project/issues).
+Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
 
 
-## 📝 License
+If you like this project please give ratings...
 
-This project is [MIT](https://github.com/Progress2002/To-Do-List/blob/main/LICENSE) licensed.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank to microverse .....
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
