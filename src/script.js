@@ -1,65 +1,59 @@
-// Define the task array with sample tasks
-const tasks = [
-  {
-    description: 'Task 1',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Task 2',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Task 3',
-    completed: false,
-    index: 2,
-  },
-];
+// status.js
 
-// Define the function to add new task
-const addTask = (description) => {
-  const task = {
-    description,
-    completed: false,
-    index: tasks.length,
-  };
-  tasks.push(task);
-  return task;
-};
+function markAsCompleted(item) {
+  item.completed = true;
+}
 
-// Define the function to toggle task completion status
-const toggleTaskCompletion = (id) => {
-  const task = tasks[id];
-  task.completed = !task.completed;
-  return task;
-};
+function markAsIncomplete(item) {
+  item.completed = false;
+}
 
-// Define the function to remove a task
-const removeTask = (id) => {
-  tasks.splice(id, 1);
-};
+function filterCompleted(items) {
+  return items.filter((item) => !item.completed);
+}
 
-// Define the function to populate the task list
-const populateTasks = () => {
-  const parentElement = document.getElementById('taskList');
-  parentElement.innerHTML = '';
-  tasks.forEach((task) => {
-    const { description, completed, index: id } = task;
-    const innerHTML = `
-      <p>${description}</p>
-      <p>${completed ? 'completed' : 'not completed'}</p>
-      <button class="removeButton">Remove</button>
-      <input type="checkbox" ${completed ? 'checked' : ''}>
-    `;
-    const newTodoListElement = document.createElement('li');
-    Object.assign(newTodoListElement, { innerHTML, id });
-    parentElement.appendChild(newTodoListElement);
+// main.js
+
+import { markAsCompleted, markAsIncomplete, filterCompleted } from './status.js';
+
+let items = JSON.parse(localStorage.getItem('items')) || [];
+
+function addTask(description) {
+  const task = { description, completed: false };
+  items.push(task);
+  localStorage.setItem('items', JSON.stringify(items));
+}
+
+function getItemIndexFromCheckbox(checkbox) {
+  const itemId = checkbox.dataset.itemId;
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].description === itemId) {
+      return i;
+    }
+  }
+  return -1; // item not found
+}
+
+function populateTasks() {
+  const taskList = document.getElementById('taskList');
+  taskList.innerHTML = '';
+  items.forEach((item, index) => {
+    const listItem = document.createElement('li');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = item.completed;
+    checkbox.dataset.itemId = item.description;
+    checkbox.id = `checkbox${index}`;
+    const label = document.createElement('label');
+    label.setAttribute('for', `checkbox${index}`);
+    label.textContent = item.description;
+    listItem.appendChild(checkbox);
+    listItem.appendChild(label);
+    taskList.appendChild(listItem);
   });
-};
+}
 
-// Add event listener for form submission
-const form = document.getElementById('addTaskForm');
+const form = document.getElementById('newTaskForm');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const input = document.getElementById('newTaskInput');
@@ -71,26 +65,45 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-// Add event listener for task completion checkbox
-const taskList = document.getElementById('taskList');
-taskList.addEventListener('click', (event) => {
-  const { target } = event;
-  if (target.type === 'checkbox') {
-    const id = Number(target.parentElement.id);
-    toggleTaskCompletion(id);
-    populateTasks();
-  }
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', (event) => {
+    const itemIndex = getItemIndexFromCheckbox(event.target);
+    if (itemIndex >= 0) {
+      if (event.target.checked) {
+        markAsCompleted(items[itemIndex]);
+      } else {
+        markAsIncomplete(items[itemIndex]);
+      }
+      localStorage.setItem('items', JSON.stringify(items));
+    }
+  });
 });
 
-// Add event listener for remove button
-taskList.addEventListener('click', (event) => {
-  const { target } = event;
-  if (target.classList.contains('removeButton')) {
-    const id = Number(target.parentElement.id);
-    removeTask(id);
-    populateTasks();
-  }
+const clearCompletedButton = document.getElementById('clearCompletedButton');
+clearCompletedButton.addEventListener('click', () => {
+  items = filterCompleted(items);
+  localStorage.setItem('items', JSON.stringify(items));
+  populateTasks();
 });
 
-// Initial population of task list
+const clearAllButton = document.getElementById('clearAllButton');
+clearAllButton.addEventListener('click', () => {
+  items = [];
+  localStorage.setItem('items', JSON.stringify(items));
+  populateTasks();
+});
+
+const filterCompletedButton = document.getElementById('filterCompletedButton');
+filterCompletedButton.addEventListener('click', () => {
+  items = filterCompleted(items);
+  populateTasks();
+});
+
+const filterAllButton = document.getElementById('filterAllButton');
+filterAllButton.addEventListener('click', () => {
+  items = JSON.parse(localStorage.getItem('items')) || [];
+  populateTasks();
+});
+
 populateTasks();
