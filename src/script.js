@@ -94,5 +94,3 @@ taskList.addEventListener('click', (event) => {
 
 // Initial population of task list
 populateTasks();
-
-
