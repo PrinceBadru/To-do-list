@@ -28,11 +28,14 @@ const removeTask = (id) => {
 const populateTasks = () => {
   const parentElement = document.getElementById('taskList');
   parentElement.innerHTML = '';
+  tasks.sort((a, b) => a.index - b.index); // sort the tasks by their index values
   tasks.forEach((task) => {
     const { description, completed, index: id } = task;
     const innerHTML = `
       <p>${description}</p>
       <p>${completed ? 'completed' : 'not completed'}</p>
+      <button class="removeButton">Remove</button>
+      <input type="checkbox" ${completed ? 'checked' : ''}>
     `;
     const newTodoListElement = document.createElement('li');
     Object.assign(newTodoListElement, { innerHTML, id });
