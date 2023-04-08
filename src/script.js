@@ -1,16 +1,17 @@
+// Define the task array with sample tasks
 const tasks = [
   {
-    description: 'Finish homework',
+    description: 'Task 1',
     completed: false,
     index: 0,
   },
   {
-    description: 'Go grocery shopping',
+    description: 'Task 2',
     completed: true,
     index: 1,
   },
   {
-    description: 'Clean the house',
+    description: 'Task 3',
     completed: false,
     index: 2,
   },
@@ -48,6 +49,8 @@ const populateTasks = () => {
     const innerHTML = `
       <p>${description}</p>
       <p>${completed ? 'completed' : 'not completed'}</p>
+      <button class="removeButton">Remove</button>
+      <input type="checkbox" ${completed ? 'checked' : ''}>
     `;
     const newTodoListElement = document.createElement('li');
     Object.assign(newTodoListElement, { innerHTML, id });
@@ -91,4 +94,3 @@ taskList.addEventListener('click', (event) => {
 
 // Initial population of task list
 populateTasks();
-
