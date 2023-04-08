@@ -1,4 +1,4 @@
-import "./style.css";
+import './style.css';
 import {
   render,
   remove,
@@ -7,25 +7,25 @@ import {
   cleareCompleted,
   tasks,
   formaction,
-} from "./script.js";
+} from './script.js';
 
-const toDoListContainer = document.querySelector(".todo-list");
+const toDoListContainer = document.querySelector('.todo-list');
 
 formaction();
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   tasks.sort((a, b) => a.index - b.index).map((item) => render(item));
   remove(toDoListContainer);
   tasks.forEach((task) => {
     if (task.completed) {
       const taskIndex = task.index;
-      toDoListContainer.querySelectorAll(".text").forEach((text) => {
+      toDoListContainer.querySelectorAll('.text').forEach((text) => {
         const textParentNodeId = parseInt(
           text.parentNode.parentNode.parentNode.id,
-          10
+          10,
         );
         if (textParentNodeId === taskIndex) {
-          text.classList.add("completed");
+          text.classList.add('completed');
         }
       });
     }

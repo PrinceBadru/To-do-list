@@ -1,5 +1,5 @@
 // Define the task array
-let tasks = [];
+const tasks = [];
 
 // Define the function to add new task
 const addTask = (description) => {
@@ -26,38 +26,38 @@ const removeTask = (id) => {
 
 // Define the function to populate the task list
 const populateTasks = () => {
-  const parentElement = document.getElementById("taskList");
-  parentElement.innerHTML = "";
+  const parentElement = document.getElementById('taskList');
+  parentElement.innerHTML = '';
   tasks.forEach((task) => {
     const { description, completed, index: id } = task;
     const innerHTML = `
       <p>${description}</p>
-      <p>${completed ? "completed" : "not completed"}</p>
+      <p>${completed ? 'completed' : 'not completed'}</p>
     `;
-    const newTodoListElement = document.createElement("li");
+    const newTodoListElement = document.createElement('li');
     Object.assign(newTodoListElement, { innerHTML, id });
     parentElement.appendChild(newTodoListElement);
   });
 };
 
 // Add event listener for form submission
-const form = document.getElementById("addTaskForm");
-form.addEventListener("submit", (event) => {
+const form = document.getElementById('addTaskForm');
+form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const input = document.getElementById("newTaskInput");
+  const input = document.getElementById('newTaskInput');
   const description = input.value.trim();
   if (description) {
     addTask(description);
-    input.value = "";
+    input.value = '';
     populateTasks();
   }
 });
 
 // Add event listener for task completion checkbox
-const taskList = document.getElementById("taskList");
-taskList.addEventListener("click", (event) => {
-  const target = event.target;
-  if (target.type === "checkbox") {
+const taskList = document.getElementById('taskList');
+taskList.addEventListener('click', (event) => {
+  const { target } = event;
+  if (target.type === 'checkbox') {
     const id = Number(target.parentElement.id);
     toggleTaskCompletion(id);
     populateTasks();
@@ -65,9 +65,9 @@ taskList.addEventListener("click", (event) => {
 });
 
 // Add event listener for remove button
-taskList.addEventListener("click", (event) => {
-  const target = event.target;
-  if (target.classList.contains("removeButton")) {
+taskList.addEventListener('click', (event) => {
+  const { target } = event;
+  if (target.classList.contains('removeButton')) {
     const id = Number(target.parentElement.id);
     removeTask(id);
     populateTasks();
