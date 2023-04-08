@@ -22,11 +22,10 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [AWESOME BOOK PROJECT] <a name="about-project"></a>
+# 📖 [TO DO LIST] <a name="about-project"></a>
 
-**[AWESOME_BOOK_PROJECT]** 
-This project is about addition and deletion of books into local storage 
-using javascript objects. 
+**[TO_DO_LIST]** 
+This is a good application that grants users the ability to save list of activites/task they intend doing. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -38,7 +37,6 @@ using javascript objects.
 
 ### Key Features <a name="key-features"></a>
 
-- **[Display_list_in_Table_form]**
 - **[Add_buttons_and_functionallity]**
 - **[Remove_Button_and_functionallity]**
 - **[ES6_Modules]**
