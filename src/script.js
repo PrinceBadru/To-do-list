@@ -1,5 +1,20 @@
-// Define the task array
-const tasks = [];
+const tasks = [
+  {
+    description: 'Finish homework',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'Go grocery shopping',
+    completed: true,
+    index: 1,
+  },
+  {
+    description: 'Clean the house',
+    completed: false,
+    index: 2,
+  },
+];
 
 // Define the function to add new task
 const addTask = (description) => {
@@ -33,8 +48,6 @@ const populateTasks = () => {
     const innerHTML = `
       <p>${description}</p>
       <p>${completed ? 'completed' : 'not completed'}</p>
-      <button class="removeButton">Remove</button>
-      <input type="checkbox" ${completed ? 'checked' : ''}>
     `;
     const newTodoListElement = document.createElement('li');
     Object.assign(newTodoListElement, { innerHTML, id });
@@ -78,3 +91,4 @@ taskList.addEventListener('click', (event) => {
 
 // Initial population of task list
 populateTasks();
+
