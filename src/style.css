@@ -12,10 +12,11 @@ body {
 }
 
 #main {
-  width: 94%;
+  width: 96%;
+  border-radius: 8px;
   margin: auto;
   background-color: aliceblue;
-  box-shadow: 0 5px 9px gray;
+  box-shadow: 0 6px 11px gray;
 }
 
 .heading {
@@ -23,83 +24,90 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  background-color: rgb(48, 40, 246);
+  color: #fff;
+  border-radius: 8px 5px 0 0;
 }
 
 h2 {
-  font-weight: normal;
+  font-weight: bolder;
 }
 
-.add1 {
+.add {
   width: 98%;
 }
 
-input[type="text"] {
+form {
+  display: flex;
+}
+
+input[type=text] {
   padding: 16px;
   display: block;
   outline: none;
-  width: 100%;
-  font-size: 18px;
+  border: none;
+  width: 98%;
+  font-size: 22px;
   font-style: italic;
   background-color: inherit;
 }
 
+button[type=submit] {
+  border: none;
+  background-color: inherit;
+  margin-right: 18px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
 .todo-list .list {
-  padding: 15px;
+  padding: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .list-description {
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 88%;
 }
 
 .list-description p {
-  width: 98%;
+  width: 96%;
   outline: none;
   border: none;
 }
 
-.done {
+.completed {
   text-decoration: line-through;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   display: inline-block;
   border: 0;
   position: relative;
   top: 4px;
   height: 32px;
-  width: 22px;
-  margin-right: 9px;
+  width: 21px;
+  margin-right: 8px;
 }
 
-input[type="checkbox"]:hover {
+input[type=checkbox]:hover {
   cursor: pointer;
-}
-
-.icon {
-  font-size: 23px;
-  color: rgb(175, 175, 175);
-  cursor: pointer;
-}
-
-.active {
-  display: none;
 }
 
 .delete {
-  color: rgb(223, 32, 32);
+  color: rgb(227, 55, 53);
   cursor: pointer;
 }
 
 #completed {
   padding: 13px;
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
+  background-color: rgb(221, 216, 218);
 }
 
 #completed:hover {
@@ -107,7 +115,7 @@ input[type="checkbox"]:hover {
 }
 
 #completed button {
-  font-size: 18px;
+  font-size: 19px;
   border: none;
   background-color: inherit;
   color: rgb(134, 131, 131);
@@ -120,6 +128,6 @@ input[type="checkbox"]:hover {
 
 @media (min-width: 768px) {
   #main {
-    width: 55%;
+    width: 52%;
   }
 }

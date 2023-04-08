@@ -1,4 +1,4 @@
-import { tasks } from "./script.js"; // eslint-disable-line
+import { tasks } from './script.js'; // eslint-disable-line 
 
 // mark a task as completed or not------------
 const toggleComplete = (element) => {

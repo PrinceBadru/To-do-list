@@ -1,12 +1,6 @@
 import './style.css';
 import {
-  render,
-  remove,
-  markAsCompleted,
-  editTask,
-  cleareCompleted,
-  tasks,
-  formaction,
+  render, remove, markAsCompleted, editTask, cleareCompleted, tasks, formaction,
 } from './script.js';
 
 const toDoListContainer = document.querySelector('.todo-list');
@@ -20,12 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (task.completed) {
       const taskIndex = task.index;
       toDoListContainer.querySelectorAll('.text').forEach((text) => {
-        const textParentNodeId = parseInt(
-          text.parentNode.parentNode.parentNode.id,
-          10,
-        );
+        const textParentNodeId = parseInt(text.parentNode.parentNode.parentNode.id, 10);
         if (textParentNodeId === taskIndex) {
           text.classList.add('completed');
+          text.previousElementSibling.checked = true;
         }
       });
     }
