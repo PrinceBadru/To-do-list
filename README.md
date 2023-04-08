@@ -61,19 +61,20 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
-
-- In order to run this project you need:
-   - Modern web browser  
+  - Code Editor  
+  - Modern web browser 
+  - linters 
+  - Module
 
 ### Setup
 
 Clone this repository to your desired folder:
-- https://github.com/david30-maker/awesome-book-project
-- cd awesome-book-project
+- https://princebadru.github.io/To-do-list/
+- cd to do list
 ### Install
 
 Install this project with:
-- cd awesome-book-project
+- cd to-do-list-project
 - Double click on the index.html file
 
 ### Usage
